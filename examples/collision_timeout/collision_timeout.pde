@@ -1,5 +1,5 @@
 /*
-  Collision detection and timeout
+  Collision detection and timeout (with fading)
 */
 
 int shapes = 200;
@@ -30,7 +30,12 @@ void setup() {
 }
 
 void draw() {
-  background(255);
+  // Fade effect
+  fill(255, 40);
+  rect(0, 0, width, height);
+  
+  // Normal effect
+  //background(255);
   for (int i=0; i<shapes; i++) {
     fill(colors[i]);
     rect(x[i], y[i], w[i], h[i]);
